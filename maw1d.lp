@@ -18,7 +18,7 @@ a("b").
 
 1 { maw(L+1,C) : a(C) } 1 :- maw(L,_), mawlength(M), L < M.
 
-mismatch(J,L) :- t(J+L-1,C), maw(L,D), C != D, mawlength(M), L = 0..M-1, J=1..textlength-M+1.
+mismatch(J,L) :- t(J+L-1,C), maw(L,D), C != D, mawlength(M), J=1..textlength-M+1.
 
 :- { mismatch(J,L) } 0, mawlength(M), J=1..textlength-M+1.
 
