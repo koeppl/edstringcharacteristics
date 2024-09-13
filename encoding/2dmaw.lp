@@ -1,27 +1,12 @@
-#const textlength=5.
-#const texts=2.
+%% expected INPUT:
+% t(text-number, character-index, character)
+% a(character)
 
 1 { mawlength(M) : M = 1..textlength } 1.
 %%% objective function
 #minimize { M : mawlength(M) }. 
 
-%text t(text-number, character-index, character)
 
-t(1,1,"b").
-t(1,2,"a").
-t(1,3,"b").
-t(1,4,"a").
-t(1,5,"a").
-
-t(2,1,"b").
-t(2,2,"b").
-t(2,3,"a").
-t(2,4,"c").
-t(2,5,"c").
-
-% alphabet('a')
-a("a").
-a("b").
 
 1 { maw(1,C) : a(C) } 1.
 
