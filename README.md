@@ -17,7 +17,9 @@ An example is `b(a|)c(abc|c)(a|b)`.
 
 ```sh
 echo 'b(a|)c(abc|c)(a|b)' | ./lce.x
+```
 
+```output
   b ( a | ) c ( a b c | c ) ( a | b )
 b 7 0 0 0 0 0 0 0 3 0 1 0 1 1 0 0 1 0 0
 ( 0 6 6 5 5 5 2 1 0 2 1 2 1 1 1 0 0 0 0
@@ -68,4 +70,10 @@ CTAAGTT
 Specifies an indeterminate string `CTAA(C|G)T(G|T)`.
 See `sample/input.txt` for the input that generates `sample/input.lp`.
 Finally, call `./translate.py <INPUT.TXT> <OUTPUT.LP>` to generate the encoded input.
+
+
+### Advanced Usage
+
+- `clingo --const n=50` will consider only the prefix of 50 characters of the input.
+- `clingo --const r=2` will consider only the first two rows/sequences of the input
 
